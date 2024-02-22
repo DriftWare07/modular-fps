@@ -5,11 +5,12 @@ res://weapons/uzi.tres
 res://weapons/knife.tres
 res://weapons/shotgun.tres
 res://world_env.tres
+res://assets/materials/wood.tres
 res://scenes/player.tscn
-res://scenes/vfx/small_smoke.tscn
 res://scenes/vfx/explosion_vfx.tscn
 res://scenes/vfx/muzzle_flash.tscn
-res://scripts/procdeuralrecoil.gd
-res://scripts/fx_manager.gd
-res://scripts/weaponresource.gd
+res://components/healthcomponent.tscn
 res://scripts/weaponhandler.gd
+res://scripts/procdeuralrecoil.gd
+res://components/healthcomponent.gd
+res://components/damagecomponent.gd

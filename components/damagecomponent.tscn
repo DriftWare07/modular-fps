@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nluvs25smmlk"]
+
+[ext_resource type="Script" path="res://components/damagecomponent.gd" id="1_iwpav"]
+
+[node name="Damagecomponent" type="Area3D"]
+script = ExtResource("1_iwpav")

@@ -29,7 +29,7 @@ func _ready():
 func _physics_process(delta):
 	
 	if current_time < 1:
-		print(target_object.position.z)
+		#print(target_object.position.z)
 		current_time += delta * recoil_speed
 		target_object.position.z = lerp(def_pos.z, def_pos.z + target_pos.z, lerp_speed * delta)
 		

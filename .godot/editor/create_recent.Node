@@ -1,5 +1,9 @@
-MeshInstance3D
 CollisionShape3D
+MeshInstance3D
+Damage_Component
+Health_Component
+RigidBody3D
+Area3D
 StaticBody3D
 Node3D
 SkeletonIK3D
@@ -8,7 +12,3 @@ Control
 CanvasLayer
 Camera3D
 SubViewport
-SubViewportContainer
-Decal
-RayCast3D
-GPUParticles3D

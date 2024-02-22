@@ -32,3 +32,4 @@ fire_delay = 1.0
 range = 100.0
 spread = 0.0
 projectile_count = 1
+damage = 10.0

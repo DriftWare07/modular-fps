@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cann0wi57kkqu"]
+[gd_scene load_steps=14 format=3 uid="uid://cann0wi57kkqu"]
 
 [ext_resource type="Material" uid="uid://c5rhjea5m4phe" path="res://assets/materials/tiles.tres" id="1_87qem"]
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://scenes/player.tscn" id="2_xa1mc"]
 [ext_resource type="Environment" uid="uid://gf002vy78f1f" path="res://world_env.tres" id="3_4j822"]
+[ext_resource type="Material" uid="uid://b0eumuqcr33q" path="res://assets/materials/wood.tres" id="4_qwih2"]
+[ext_resource type="Script" path="res://components/healthcomponent.gd" id="5_liywu"]
+[ext_resource type="Script" path="res://components/damagecomponent.gd" id="6_hfxtf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wo4sx"]
 size = Vector3(1000, 1, 1000)
@@ -14,9 +17,19 @@ size = Vector3(1000, 1, 1000)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_qfq3m"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qr11o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_stgwn"]
+material = ExtResource("4_qwih2")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rpw2d"]
+size = Vector3(1.1, 1.1, 1.1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="ground" type="StaticBody3D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
 shape = SubResource("BoxShape3D_wo4sx")
@@ -36,6 +49,8 @@ transform = Transform3D(1, 0, 0, 0, 0.786935, 0.617036, 0, -0.617036, 0.786935, 
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44978, -2.85493)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("CylinderShape3D_7eqws")
@@ -43,3 +58,27 @@ shape = SubResource("CylinderShape3D_7eqws")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 material_override = ExtResource("1_87qem")
 mesh = SubResource("CylinderMesh_qfq3m")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04812, 1.21775, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_qr11o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_stgwn")
+
+[node name="Health_Component" type="Node" parent="RigidBody3D"]
+script = ExtResource("5_liywu")
+max_health = 10
+
+[node name="Damage_Component" type="Area3D" parent="RigidBody3D" node_paths=PackedStringArray("health_node")]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("6_hfxtf")
+health_node = NodePath("../Health_Component")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Damage_Component"]
+shape = SubResource("BoxShape3D_rpw2d")
