@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1bln35l1vtuk"]
+
+[ext_resource type="Script" path="res://scenes/vfx/particlefx.gd" id="1_hlli6"]
+[ext_resource type="PackedScene" uid="uid://by2xgosssf1md" path="res://scenes/vfx/small_sparks.tscn" id="2_wrh8u"]
+
+[node name="BulletImpact" type="Node3D" node_paths=PackedStringArray("emitters")]
+script = ExtResource("1_hlli6")
+emitters = [NodePath("sparks")]
+
+[node name="sparks" parent="." instance=ExtResource("2_wrh8u")]
+amount = 3
+lifetime = 0.2

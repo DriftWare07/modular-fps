@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://kicjwmh02uwf"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_wkneb"]
+[ext_resource type="Script" path="res://scripts/procdeuralrecoil.gd" id="2_vr7r5"]
+[ext_resource type="Script" path="res://scripts/weaponhandler.gd" id="3_7ycau"]
+[ext_resource type="Resource" uid="uid://bsbe2kedexe2v" path="res://weapons/uzi.tres" id="4_r24jt"]
+[ext_resource type="Resource" uid="uid://dft7em0aeetqq" path="res://weapons/knife.tres" id="5_xu76i"]
+[ext_resource type="Resource" uid="uid://ddq1d8mtsc64k" path="res://weapons/shotgun.tres" id="6_t3g3j"]
+[ext_resource type="ArrayMesh" uid="uid://c3lh57cu4swek" path="res://assets/models/weaponmodels/uziLong.obj" id="6_u3ugj"]
+[ext_resource type="Texture2D" uid="uid://cvyem22atdekq" path="res://assets/textures/crossheirs/crosshair047.png" id="7_clw6a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_26tbo"]
+height = 1.6
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fgxde"]
+radius = 0.4
+height = 0.8
+
+[sub_resource type="Animation" id="Animation_et2q2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0yaf5"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1.62451, 0.435276),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0523599, 0, -0.0349066), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eqtd2"]
+resource_name = "landing"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1.62451, 0.435276),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.0523599, 0, -0.0349066), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s7f04"]
+resource_name = "roll"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1),
+"transitions": PackedFloat32Array(1, 0.5, 1, 2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-3.14159, 0, 0), Vector3(-6.45772, 0, 0), Vector3(-6.28319, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8twm5"]
+_data = {
+"RESET": SubResource("Animation_et2q2"),
+"jump": SubResource("Animation_0yaf5"),
+"landing": SubResource("Animation_eqtd2"),
+"roll": SubResource("Animation_s7f04")
+}
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+script = ExtResource("1_wkneb")
+
+[node name="StandingCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_26tbo")
+
+[node name="CrouchingCollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("CapsuleShape3D_fgxde")
+disabled = true
+
+[node name="RayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
+target_position = Vector3(0, 1.6, 0)
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Head" type="Node3D" parent="Neck"]
+
+[node name="Eyes" type="Node3D" parent="Neck/Head"]
+
+[node name="Camera" type="Camera3D" parent="Neck/Head/Eyes"]
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Neck/Head/Eyes"]
+libraries = {
+"": SubResource("AnimationLibrary_8twm5")
+}
+
+[node name="cast" type="RayCast3D" parent="Neck/Head/Eyes"]
+target_position = Vector3(0, 0, -10)
+
+[node name="recoil" type="Node3D" parent="Neck/Head" node_paths=PackedStringArray("target_object")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.3, -0.5)
+script = ExtResource("2_vr7r5")
+target_object = NodePath("gunmesh")
+
+[node name="gunmesh" type="MeshInstance3D" parent="Neck/Head/recoil"]
+layers = 3
+mesh = ExtResource("6_u3ugj")
+skeleton = NodePath("../../../..")
+
+[node name="SlidingTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="weaponhandler" type="Node3D" parent="." node_paths=PackedStringArray("target_object", "gunmesh", "raycast")]
+script = ExtResource("3_7ycau")
+weaponlist = Array[Resource("res://scripts/weaponresource.gd")]([ExtResource("4_r24jt"), ExtResource("5_xu76i"), ExtResource("6_t3g3j")])
+target_object = NodePath("../Neck/Head/recoil")
+gunmesh = NodePath("../Neck/Head/recoil/gunmesh")
+raycast = NodePath("../Neck/Head/Eyes/cast")
+
+[node name="weapontimer" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="crossheir" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_clw6a")
+stretch_mode = 3
+
+[connection signal="animation_finished" from="Neck/Head/Eyes/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="SlidingTimer" to="." method="_on_sliding_timer_timeout"]
+[connection signal="timeout" from="weapontimer" to="weaponhandler" method="_on_weapontimer_timeout"]

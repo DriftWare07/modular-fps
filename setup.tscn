@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cann0wi57kkqu"]
+
+[ext_resource type="Material" uid="uid://c5rhjea5m4phe" path="res://assets/materials/tiles.tres" id="1_87qem"]
+[ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://scenes/player.tscn" id="2_xa1mc"]
+[ext_resource type="Environment" uid="uid://gf002vy78f1f" path="res://world_env.tres" id="3_4j822"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wo4sx"]
+size = Vector3(1000, 1, 1000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_haylq"]
+size = Vector3(1000, 1, 1000)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7eqws"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qfq3m"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+shape = SubResource("BoxShape3D_wo4sx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+material_override = ExtResource("1_87qem")
+mesh = SubResource("BoxMesh_haylq")
+
+[node name="Player" parent="." instance=ExtResource("2_xa1mc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4224, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_4j822")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.786935, 0.617036, 0, -0.617036, 0.786935, 0, 4.58456, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44978, -2.85493)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_7eqws")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = ExtResource("1_87qem")
+mesh = SubResource("CylinderMesh_qfq3m")

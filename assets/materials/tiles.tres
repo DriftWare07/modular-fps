@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c5rhjea5m4phe"]
+
+[ext_resource type="Texture2D" uid="uid://cbt7gh2vm73i4" path="res://assets/textures/s2 Tiles Rect DarkGrey.png" id="1_hpgvr"]
+[ext_resource type="Texture2D" uid="uid://c6nwn6607pcw6" path="res://assets/textures/normals/darkgreytile_normal.png" id="2_58m1f"]
+
+[resource]
+albedo_texture = ExtResource("1_hpgvr")
+normal_enabled = true
+normal_texture = ExtResource("2_58m1f")
+uv1_triplanar = true

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="weapon" load_steps=10 format=3 uid="uid://bsbe2kedexe2v"]
+
+[ext_resource type="ArrayMesh" uid="uid://c3lh57cu4swek" path="res://assets/models/weaponmodels/uziLong.obj" id="1_ameqo"]
+[ext_resource type="PackedScene" uid="uid://d1bln35l1vtuk" path="res://scenes/vfx/bullet_impact.tscn" id="1_h72hr"]
+[ext_resource type="Texture2D" uid="uid://b4ejb0jqkh1ac" path="res://assets/materials/bullet_hole.png" id="2_cw6m3"]
+[ext_resource type="Script" path="res://scripts/weaponresource.gd" id="2_ide4o"]
+[ext_resource type="AudioStream" uid="uid://cacx2fi8gyr2h" path="res://assets/sfx/9mm Single.mp3" id="3_hwhf1"]
+[ext_resource type="PackedScene" uid="uid://bgkmbpwkxxggb" path="res://scenes/vfx/muzzle_flash.tscn" id="4_tv5bg"]
+
+[sub_resource type="Curve" id="Curve_irrad"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.478, -0.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_jnjb1"]
+_data = [Vector2(0.113402, 0), 0.0, 0.0, 0, 0, Vector2(0.520619, 0.78022), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_46otk"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.675824, 0.659341), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[resource]
+script = ExtResource("2_ide4o")
+model = ExtResource("1_ameqo")
+recoil_rotation_x = SubResource("Curve_jnjb1")
+recoil_rotation_z = SubResource("Curve_46otk")
+recoil_position_z = SubResource("Curve_irrad")
+recoil_amplitude = Vector3(1, 1, 1)
+lerp_speed = 1.0
+recoil_speed = 5.0
+camera_shake_amount = 0.3
+sound = ExtResource("3_hwhf1")
+impact_fx = ExtResource("1_h72hr")
+impact_texture = ExtResource("2_cw6m3")
+muzzle_flash_position = Vector3(0, 0.08, 0.2)
+muzzle_flash_instance = ExtResource("4_tv5bg")
+fire_delay = 0.1
+range = 100.0
+spread = 3.0
+projectile_count = 1

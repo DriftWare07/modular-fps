@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://t82qa5v16aid"]
+
+[ext_resource type="Script" path="res://scripts/soundinstance.gd" id="1_v7ac2"]
+
+[node name="Soundinstance" type="Node3D"]
+script = ExtResource("1_v7ac2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"gun sfx"
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

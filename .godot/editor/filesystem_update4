@@ -1,0 +1,15 @@
+res://setup.tscn
+res://assets/particle process/fireflash/fireflash.tres
+res://assets/materials/tiles.tres
+res://weapons/uzi.tres
+res://weapons/knife.tres
+res://weapons/shotgun.tres
+res://world_env.tres
+res://scenes/player.tscn
+res://scenes/vfx/small_smoke.tscn
+res://scenes/vfx/explosion_vfx.tscn
+res://scenes/vfx/muzzle_flash.tscn
+res://scripts/procdeuralrecoil.gd
+res://scripts/fx_manager.gd
+res://scripts/weaponresource.gd
+res://scripts/weaponhandler.gd

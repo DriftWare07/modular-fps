@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=3 uid="uid://bgkmbpwkxxggb"]
+
+[ext_resource type="Script" path="res://scenes/vfx/particlefx.gd" id="1_s7v7s"]
+[ext_resource type="Texture2D" uid="uid://y0nyu0o6e0id" path="res://assets/particle process/sparks/star_05.png" id="2_ffw3l"]
+[ext_resource type="PackedScene" uid="uid://b0h1h55ru3v5q" path="res://scenes/vfx/small_flash.tscn" id="3_v8d7e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cklnl"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_ffw3l")
+
+[sub_resource type="Curve" id="Curve_odgb5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ha0xt"]
+max_value = 5.0
+_data = [Vector2(0, 5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_iymrs"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_6ix65"]
+curve_x = SubResource("Curve_odgb5")
+curve_y = SubResource("Curve_ha0xt")
+curve_z = SubResource("Curve_iymrs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lalh3"]
+particle_flag_align_y = true
+direction = Vector3(0, 0, -1)
+spread = 15.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -20, 0)
+scale_min = 0.1
+scale_max = 0.1
+scale_curve = SubResource("CurveXYZTexture_6ix65")
+color = Color(5, 2, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_78boc"]
+
+[sub_resource type="Curve" id="Curve_3hxdm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_a3ngg"]
+curve = SubResource("Curve_3hxdm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g25vg"]
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_a3ngg")
+color = Color(2.5, 1, 0.5, 1)
+
+[node name="MuzzleFlash" type="Node3D" node_paths=PackedStringArray("emitters")]
+script = ExtResource("1_s7v7s")
+emitters = [NodePath("sparks"), NodePath("flash")]
+
+[node name="sparks" type="GPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_cklnl")
+emitting = false
+amount = 10
+lifetime = 0.1
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_lalh3")
+draw_pass_1 = SubResource("QuadMesh_78boc")
+
+[node name="flash" parent="." instance=ExtResource("3_v8d7e")]
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_g25vg")
