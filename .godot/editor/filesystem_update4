@@ -10,7 +10,4 @@ res://scenes/player.tscn
 res://scenes/vfx/explosion_vfx.tscn
 res://scenes/vfx/muzzle_flash.tscn
 res://components/healthcomponent.tscn
-res://scripts/weaponhandler.gd
-res://scripts/procdeuralrecoil.gd
-res://components/healthcomponent.gd
-res://components/damagecomponent.gd
+res://scripts/player.gd

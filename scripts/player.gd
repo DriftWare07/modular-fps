@@ -36,7 +36,8 @@ var stand_after_roll = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+	$Neck/Head/Eyes/cast.add_exception($".")
+	#$Neck/Head/Eyes/cast.add_exception($CrouchingCollisionShape)
 
 
 func _input(event):

@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708636676
+::res://::1708642623
 default_bus_layout.tres::AudioBusLayout::704140066206254992::1708115213::0::1::::<><>::
 icon.svg::CompressedTexture2D::5602766641754900057::1707772140::1707772147::1::::<><>::
-setup.tscn::PackedScene::4800513413220934764::1708636666::0::1::::<><>::uid://c5rhjea5m4phe::::res://assets/materials/tiles.tres<>uid://kicjwmh02uwf::::res://scenes/player.tscn<>uid://gf002vy78f1f::::res://world_env.tres<>uid://b0eumuqcr33q::::res://assets/materials/wood.tres
-world_env.tres::Environment::433018971971140437::1708636666::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr
+README.md::TextFile::-1::1708637603::0::1::::<><>::
+setup.tscn::PackedScene::4800513413220934764::1708637552::0::1::::<><>::uid://c5rhjea5m4phe::::res://assets/materials/tiles.tres<>uid://kicjwmh02uwf::::res://scenes/player.tscn<>uid://gf002vy78f1f::::res://world_env.tres<>uid://b0eumuqcr33q::::res://assets/materials/wood.tres<>res://components/healthcomponent.gd<>res://components/damagecomponent.gd
+world_env.tres::Environment::433018971971140437::1708636683::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr
 ::res://addons/::1708636614
 ::res://addons/godot-jolt/::1708636615
 godot-jolt.gdextension::GDExtension::-1::1708636615::0::1::::<><>::
@@ -21,14 +22,14 @@ THIRDPARTY.txt::TextFile::-1::1708636615::0::1::::<><>::
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/::1708636615
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/Resources/::1708636615
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/_CodeSignature/::1708636615
-::res://addons/godot-jolt/windows/::1708636668
+::res://addons/godot-jolt/windows/::1708642614
 ::res://assets/::1708635069
 ::res://assets/hdris/::1708635069
 kloofendal_48d_partly_cloudy_puresky_2k.hdr::CompressedTexture2D::1269733906213135395::1707772263::1707772281::1::::<><>::
-::res://assets/materials/::1708636666
+::res://assets/materials/::1708636683
 bullet_hole.png::CompressedTexture2D::4430704226668711042::1708119005::1708119099::1::::<><>::
-tiles.tres::StandardMaterial3D::6914042400914355862::1708636666::0::1::::<><>::uid://cbt7gh2vm73i4::::res://assets/textures/s2 Tiles Rect DarkGrey.png<>uid://c6nwn6607pcw6::::res://assets/textures/normals/darkgreytile_normal.png
-wood.tres::StandardMaterial3D::122077533245321568::1708636666::0::1::::<><>::uid://bm8pt6r2vrkkw::::res://assets/textures/s2 Wood Painted 01 Blue 1 Faded.png<>uid://c0m76m6psv44r::::res://assets/textures/normals/woodpaintedbluefaded-norm.png
+tiles.tres::StandardMaterial3D::6914042400914355862::1708636682::0::1::::<><>::uid://cbt7gh2vm73i4::::res://assets/textures/s2 Tiles Rect DarkGrey.png<>uid://c6nwn6607pcw6::::res://assets/textures/normals/darkgreytile_normal.png
+wood.tres::StandardMaterial3D::122077533245321568::1708636683::0::1::::<><>::uid://bm8pt6r2vrkkw::::res://assets/textures/s2 Wood Painted 01 Blue 1 Faded.png<>uid://c0m76m6psv44r::::res://assets/textures/normals/woodpaintedbluefaded-norm.png
 ::res://assets/models/::1708635069
 Adventurer.gltf::PackedScene::3603364446438348146::1707772977::1707773850::1::::<><>::
 ::res://assets/models/weaponmodels/::1708635069
@@ -38,8 +39,8 @@ uziLong.obj::Mesh::6761317422097287242::1707773290::1707942457::1::::<><>::
 ::res://assets/particle process/::1708635069
 smoke.tres::ParticleProcessMaterial::1372168729598846927::1708120035::0::1::::<><>::
 smoke_04.png::CompressedTexture2D::6158582138149591279::1708118752::1708118754::1::::<><>::
-::res://assets/particle process/fireflash/::1708636666
-fireflash.tres::ParticleProcessMaterial::1097453157101882967::1708636666::0::1::::<><>::
+::res://assets/particle process/fireflash/::1708636682
+fireflash.tres::ParticleProcessMaterial::1097453157101882967::1708636682::0::1::::<><>::
 smoke.tres::StandardMaterial3D::3701977532950255847::1708118474::0::1::::<><>::uid://y0nyu0o6e0id::::res://assets/particle process/sparks/star_05.png
 ::res://assets/particle process/flash/::1708635069
 flash.tres::ParticleProcessMaterial::4326457468222635800::1708116720::0::1::::<><>::
@@ -64,34 +65,34 @@ texture_05.png::CompressedTexture2D::221177165388359405::1707772263::1707772264:
 ::res://assets/textures/normals/::1708636521
 darkgreytile_normal.png::CompressedTexture2D::6976893097421641323::1707772701::1707772716::1::::<><>::
 woodpaintedbluefaded-norm.png::CompressedTexture2D::6554333973640891591::1708636509::1708636521::1::::<><>::
-::res://components/::1708636667
-damagecomponent.gd::GDScript::-1::1708636339::0::1::::Damage_Component<>Area3D<>::
+::res://components/::1708637544
+damagecomponent.gd::GDScript::-1::1708637205::0::1::::Damage_Component<>Area3D<>::
 damagecomponent.tscn::PackedScene::936415952634035120::1708636349::0::1::::<><>::res://components/damagecomponent.gd
-healthcomponent.gd::GDScript::-1::1708636206::0::1::::Health_Component<>Node<>::
-healthcomponent.tscn::PackedScene::4236050696520540990::1708636667::0::1::::<><>::res://components/healthcomponent.gd
-::res://scenes/::1708636666
-player.tscn::PackedScene::718542138947376649::1708636666::0::1::::<><>::res://scripts/player.gd<>res://scripts/procdeuralrecoil.gd<>res://scripts/weaponhandler.gd<>uid://bsbe2kedexe2v::::res://weapons/uzi.tres<>uid://dft7em0aeetqq::::res://weapons/knife.tres<>uid://ddq1d8mtsc64k::::res://weapons/shotgun.tres<>uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://cvyem22atdekq::::res://assets/textures/crossheirs/crosshair047.png
+healthcomponent.gd::GDScript::-1::1708637532::0::1::::Health_Component<>Node<>::
+healthcomponent.tscn::PackedScene::4236050696520540990::1708637544::0::1::::<><>::res://components/healthcomponent.gd
+::res://scenes/::1708637544
+player.tscn::PackedScene::718542138947376649::1708637544::0::1::::<><>::res://scripts/player.gd<>res://scripts/procdeuralrecoil.gd<>res://scripts/weaponhandler.gd<>uid://bsbe2kedexe2v::::res://weapons/uzi.tres<>uid://dft7em0aeetqq::::res://weapons/knife.tres<>uid://ddq1d8mtsc64k::::res://weapons/shotgun.tres<>uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://cvyem22atdekq::::res://assets/textures/crossheirs/crosshair047.png
 soundinstance.tscn::PackedScene::1403380473848000587::1708115215::0::1::::<><>::res://scripts/soundinstance.gd
 world.tscn::PackedScene::6546365893821010311::1707772503::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://nxfjrmnbay4t::::res://assets/textures/dev/grids/Dark/texture_07.png<>uid://kicjwmh02uwf::::res://scenes/player.tscn
-::res://scenes/vfx/::1708636667
+::res://scenes/vfx/::1708637544
 bullet_decal.tscn::PackedScene::7242219474430839630::1708119860::0::1::::<><>::uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png
 bullet_impact.tscn::PackedScene::8986928983196718630::1708131689::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://by2xgosssf1md::::res://scenes/vfx/small_sparks.tscn
 explosion_vfx.gd::GDScript::-1::1708117540::0::1::::<>Node3D<>::
-explosion_vfx.tscn::PackedScene::6416994897182846349::1708636666::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://by2xgosssf1md::::res://scenes/vfx/small_sparks.tscn<>uid://bs0ja8v3b5vgh::::res://assets/particle process/fireflash/smoke.tres<>uid://b0h1h55ru3v5q::::res://scenes/vfx/small_flash.tscn<>uid://pvu5mqwuhkst::::res://assets/particle process/fireflash/fireflash.tres<>uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
-muzzle_flash.tscn::PackedScene::2828928735090945997::1708636667::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://y0nyu0o6e0id::::res://assets/particle process/sparks/star_05.png<>uid://b0h1h55ru3v5q::::res://scenes/vfx/small_flash.tscn
+explosion_vfx.tscn::PackedScene::6416994897182846349::1708637544::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://by2xgosssf1md::::res://scenes/vfx/small_sparks.tscn<>uid://bs0ja8v3b5vgh::::res://assets/particle process/fireflash/smoke.tres<>uid://b0h1h55ru3v5q::::res://scenes/vfx/small_flash.tscn<>uid://pvu5mqwuhkst::::res://assets/particle process/fireflash/fireflash.tres<>uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
+muzzle_flash.tscn::PackedScene::2828928735090945997::1708637544::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://y0nyu0o6e0id::::res://assets/particle process/sparks/star_05.png<>uid://b0h1h55ru3v5q::::res://scenes/vfx/small_flash.tscn
 particlefx.gd::GDScript::-1::1708552337::0::1::::<>Node<>::
 small_flash.tscn::PackedScene::4157185184136482976::1708120073::0::1::::<><>::uid://bs0ja8v3b5vgh::::res://assets/particle process/fireflash/smoke.tres<>res://scenes/vfx/particlefx.gd
 small_smoke.tscn::PackedScene::8137708044293548256::1708635186::0::1::::<><>::uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
 small_sparks.tscn::PackedScene::4128099099938050443::1708120073::0::1::::<><>::uid://dgojoeyqct3q0::::res://assets/particle process/sparks/flashmaterial.tres
 smoke.tscn::PackedScene::3702622063024073821::1708119941::0::1::::<><>::uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
-::res://scripts/::1708635069
+::res://scripts/::1708637000
 fx_manager.gd::GDScript::-1::1708632634::0::1::::<>Node<>::
 player.gd::GDScript::-1::1708438414::0::1::::<>CharacterBody3D<>::
-procdeuralrecoil.gd::GDScript::-1::1708634128::0::1::::RecoilHandler<>Node<>::
+procdeuralrecoil.gd::GDScript::-1::1708637000::0::1::::RecoilHandler<>Node<>::
 soundinstance.gd::GDScript::-1::1708115165::0::1::::<>Node3D<>::
-weaponhandler.gd::GDScript::-1::1708634329::0::1::::<>Node3D<>::
+weaponhandler.gd::GDScript::-1::1708636981::0::1::::<>Node3D<>::
 weaponresource.gd::GDScript::-1::1708634374::0::1::::weapon<>Resource<>::
-::res://weapons/::1708636666
-knife.tres::Resource/weapon::7551380202446584476::1708636666::0::1::::<><>::res://scripts/weaponresource.gd<>uid://duhqqfxrf6ceo::::res://assets/models/weaponmodels/knife_sharp.obj
-shotgun.tres::Resource/weapon::7404444377947649776::1708636666::0::1::::<><>::uid://bs86ptx7kfbpu::::res://assets/models/weaponmodels/Shotgun_1.obj<>res://scripts/weaponresource.gd<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn<>uid://b4g35cnyyek8j::::res://assets/sfx/20 Gauge Single.mp3
-uzi.tres::Resource/weapon::3652175862893522067::1708636666::0::1::::<><>::uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>res://scripts/weaponresource.gd<>uid://cacx2fi8gyr2h::::res://assets/sfx/9mm Single.mp3<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn
+::res://weapons/::1708637026
+knife.tres::Resource/weapon::7551380202446584476::1708636682::0::1::::<><>::res://scripts/weaponresource.gd<>uid://duhqqfxrf6ceo::::res://assets/models/weaponmodels/knife_sharp.obj
+shotgun.tres::Resource/weapon::7404444377947649776::1708637025::0::1::::<><>::uid://bs86ptx7kfbpu::::res://assets/models/weaponmodels/Shotgun_1.obj<>res://scripts/weaponresource.gd<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn<>uid://b4g35cnyyek8j::::res://assets/sfx/20 Gauge Single.mp3
+uzi.tres::Resource/weapon::3652175862893522067::1708637025::0::1::::<><>::uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>res://scripts/weaponresource.gd<>uid://cacx2fi8gyr2h::::res://assets/sfx/9mm Single.mp3<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn
