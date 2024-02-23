@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var JUMP_VELOCITY = 4.5
 @export var WALKING_SPEED = 5.0
+@export var push_force = 80
 @export var SPRINTING_SPEED = 8.0
 @export var CROUCHING_SPEED = 3.0
 @export var CROUCHING_DEPTH = -0.9
@@ -64,7 +65,7 @@ func _physics_process(delta):
 		weaponhandler.toggle(-1)
 	
 	
-	
+	rigidbody_interactions()
 	
 	
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
@@ -218,3 +219,10 @@ func _on_sliding_timer_timeout():
 
 func _on_animation_player_animation_finished(anim_name):
 	stand_after_roll = anim_name == 'roll' and !is_crouching
+
+func rigidbody_interactions():
+  # after calling move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody3D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)

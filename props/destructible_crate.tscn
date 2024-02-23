@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://w0013c7waof"]
+
+[ext_resource type="Material" uid="uid://b0eumuqcr33q" path="res://assets/materials/wood.tres" id="1_x60vy"]
+[ext_resource type="Script" path="res://components/healthcomponent.gd" id="2_j2ys4"]
+[ext_resource type="Script" path="res://components/damagecomponent.gd" id="3_qrqu5"]
+[ext_resource type="Script" path="res://addons/destruction/destruction.gd" id="4_hwth7"]
+[ext_resource type="PackedScene" uid="uid://bbb2ctuw8tfaj" path="res://assets/models/destruction models/crate_dest_1.glb" id="5_vgk4p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qr11o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_stgwn"]
+material = ExtResource("1_x60vy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rpw2d"]
+size = Vector3(1.1, 1.1, 1.1)
+
+[node name="Destructible_Crate" type="RigidBody3D"]
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qr11o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_stgwn")
+
+[node name="Health_Component" type="Node" parent="."]
+script = ExtResource("2_j2ys4")
+max_health = 10
+free_on_death = false
+
+[node name="Damage_Component" type="Area3D" parent="." node_paths=PackedStringArray("health_node")]
+script = ExtResource("3_qrqu5")
+health_node = NodePath("../Health_Component")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Damage_Component"]
+shape = SubResource("BoxShape3D_rpw2d")
+
+[node name="Destruction" type="Node" parent="." node_paths=PackedStringArray("shard_container")]
+script = ExtResource("4_hwth7")
+fragmented = ExtResource("5_vgk4p")
+shard_container = NodePath("")
+fade_delay = 8.0
+shrink_delay = 8.0
+animation_length = 10.0
+
+[connection signal="death" from="Health_Component" to="Destruction" method="destroy"]

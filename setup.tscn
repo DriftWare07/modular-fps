@@ -1,11 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cann0wi57kkqu"]
+[gd_scene load_steps=9 format=3 uid="uid://cann0wi57kkqu"]
 
 [ext_resource type="Material" uid="uid://c5rhjea5m4phe" path="res://assets/materials/tiles.tres" id="1_87qem"]
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://scenes/player.tscn" id="2_xa1mc"]
 [ext_resource type="Environment" uid="uid://gf002vy78f1f" path="res://world_env.tres" id="3_4j822"]
-[ext_resource type="Material" uid="uid://b0eumuqcr33q" path="res://assets/materials/wood.tres" id="4_qwih2"]
-[ext_resource type="Script" path="res://components/healthcomponent.gd" id="5_liywu"]
-[ext_resource type="Script" path="res://components/damagecomponent.gd" id="6_hfxtf"]
+[ext_resource type="PackedScene" uid="uid://w0013c7waof" path="res://props/destructible_crate.tscn" id="4_u21bc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wo4sx"]
 size = Vector3(1000, 1, 1000)
@@ -16,14 +14,6 @@ size = Vector3(1000, 1, 1000)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7eqws"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_qfq3m"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qr11o"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_stgwn"]
-material = ExtResource("4_qwih2")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rpw2d"]
-size = Vector3(1.1, 1.1, 1.1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -59,22 +49,17 @@ shape = SubResource("CylinderShape3D_7eqws")
 material_override = ExtResource("1_87qem")
 mesh = SubResource("CylinderMesh_qfq3m")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04812, 1.21775, 0)
+[node name="Destructible_Crate" parent="." instance=ExtResource("4_u21bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88236, 1.27234, -2.83696)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("BoxShape3D_qr11o")
+[node name="Destructible_Crate2" parent="." instance=ExtResource("4_u21bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.51722, 2.38507, -2.05288)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-mesh = SubResource("BoxMesh_stgwn")
+[node name="Destructible_Crate3" parent="." instance=ExtResource("4_u21bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14064, 1.07874, -3.41755)
 
-[node name="Health_Component" type="Node" parent="RigidBody3D"]
-script = ExtResource("5_liywu")
-max_health = 10
+[node name="Destructible_Crate4" parent="." instance=ExtResource("4_u21bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14064, 1.07874, -2.01934)
 
-[node name="Damage_Component" type="Area3D" parent="RigidBody3D" node_paths=PackedStringArray("health_node")]
-script = ExtResource("6_hfxtf")
-health_node = NodePath("../Health_Component")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RigidBody3D/Damage_Component"]
-shape = SubResource("BoxShape3D_rpw2d")
+[node name="Destructible_Crate5" parent="." instance=ExtResource("4_u21bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94867, 1.07874, -1.41944)

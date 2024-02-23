@@ -1,6 +1,7 @@
+Destruction
+CollisionShape3D
 Damage_Component
 Health_Component
-CollisionShape3D
 MeshInstance3D
 RigidBody3D
 Area3D

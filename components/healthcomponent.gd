@@ -1,6 +1,8 @@
 extends Node
 class_name Health_Component
 
+signal death
+
 @export var max_health = 100
 var health
 
@@ -12,7 +14,9 @@ func _ready():
 func damage(dmg):
 	
 	health -= abs(dmg)
-	if health < 0 and free_on_death: get_parent().queue_free()
+	if health < 0:
+		if free_on_death: get_parent().queue_free()
+		death.emit()
 
 func heal(healing):
 	if health + abs(healing) >= max_health:

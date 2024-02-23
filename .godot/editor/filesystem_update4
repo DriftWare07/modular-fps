@@ -1,3 +1,4 @@
+res://addons/destruction/destruction.gd
 res://setup.tscn
 res://assets/particle process/fireflash/fireflash.tres
 res://assets/materials/tiles.tres
@@ -6,8 +7,8 @@ res://weapons/knife.tres
 res://weapons/shotgun.tres
 res://world_env.tres
 res://assets/materials/wood.tres
+res://scenes/world.tscn
+res://scenes/soundinstance.tscn
+res://props/destructible_crate.tscn
 res://scenes/player.tscn
-res://scenes/vfx/explosion_vfx.tscn
-res://scenes/vfx/muzzle_flash.tscn
-res://components/healthcomponent.tscn
 res://scripts/player.gd

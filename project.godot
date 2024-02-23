@@ -24,6 +24,10 @@ fx="*res://scripts/fx_manager.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/destruction/plugin.cfg")
+
 [input]
 
 left={
