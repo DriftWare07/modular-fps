@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cann0wi57kkqu"]
+[gd_scene load_steps=10 format=3 uid="uid://cann0wi57kkqu"]
 
 [ext_resource type="Material" uid="uid://c5rhjea5m4phe" path="res://assets/materials/tiles.tres" id="1_87qem"]
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://scenes/player.tscn" id="2_xa1mc"]
 [ext_resource type="Environment" uid="uid://gf002vy78f1f" path="res://world_env.tres" id="3_4j822"]
 [ext_resource type="PackedScene" uid="uid://w0013c7waof" path="res://props/destructible_crate.tscn" id="4_u21bc"]
+[ext_resource type="PackedScene" uid="uid://btcb25b6tc18x" path="res://props/door.tscn" id="5_28ejw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wo4sx"]
 size = Vector3(1000, 1, 1000)
@@ -63,3 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14064, 1.07874, -2.01934)
 
 [node name="Destructible_Crate5" parent="." instance=ExtResource("4_u21bc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94867, 1.07874, -1.41944)
+
+[node name="door" parent="." instance=ExtResource("5_28ejw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79015, 1.56062, 0)

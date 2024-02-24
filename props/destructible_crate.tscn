@@ -26,7 +26,6 @@ mesh = SubResource("BoxMesh_stgwn")
 [node name="Health_Component" type="Node" parent="."]
 script = ExtResource("2_j2ys4")
 max_health = 10
-free_on_death = false
 
 [node name="Damage_Component" type="Area3D" parent="." node_paths=PackedStringArray("health_node")]
 script = ExtResource("3_qrqu5")

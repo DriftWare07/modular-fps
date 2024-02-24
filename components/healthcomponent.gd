@@ -8,15 +8,19 @@ var health
 
 @export var free_on_death = true
 
+var dead = false
+
 func _ready():
 	health = max_health
 
 func damage(dmg):
 	
-	health -= abs(dmg)
-	if health < 0:
+	
+	if health < 0 and not dead:
 		if free_on_death: get_parent().queue_free()
 		death.emit()
+		dead = true
+	health -= abs(dmg)
 
 func heal(healing):
 	if health + abs(healing) >= max_health:
