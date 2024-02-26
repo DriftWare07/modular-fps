@@ -6,14 +6,8 @@ res://weapons/knife.tres
 res://weapons/shotgun.tres
 res://world_env.tres
 res://assets/materials/wood.tres
-res://scenes/world.tscn
-res://scenes/soundinstance.tscn
-res://props/destructible_crate.tscn
+res://assets/materials/viewmodelshader.gdshader
 res://scenes/player.tscn
 res://scenes/vfx/bullet_decal.tscn
-res://scripts/dynamicfov.gd
-res://assets/materials/viewmodelshader.gdshader
-res://scripts/fx_manager.gd
-res://scripts/weaponhandler.gd
 res://props/door.tscn
-res://addons/destruction/destruction.gd
+res://props/destructible_crate.tscn

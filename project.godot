@@ -26,7 +26,18 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/destruction/plugin.cfg")
+enabled=PackedStringArray("res://addons/destruction/plugin.cfg", "res://addons/qodot/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://components/": "orange",
+"res://maps/": "green",
+"res://props/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "blue"
+}
 
 [input]
 

@@ -42,6 +42,7 @@ func primary_fire():
 				if weapon_data.impact_texture: fx.spawn_bullet_decal(raycast.get_collision_point(), raycast.get_collision_normal(), weapon_data.impact_texture)
 				if raycast.get_collider() is Damage_Component:
 					raycast.get_collider().damage(weapon_data.damage)
+				
 			#await get_tree().create_timer(0.5).timeout
 		
 		
