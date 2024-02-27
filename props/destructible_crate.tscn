@@ -25,7 +25,7 @@ mesh = SubResource("BoxMesh_stgwn")
 
 [node name="Health_Component" type="Node" parent="."]
 script = ExtResource("2_j2ys4")
-max_health = 10
+max_health = 10.0
 
 [node name="Damage_Component" type="Area3D" parent="." node_paths=PackedStringArray("health_node")]
 script = ExtResource("3_qrqu5")
@@ -37,7 +37,7 @@ shape = SubResource("BoxShape3D_rpw2d")
 [node name="Destruction" type="Node" parent="." node_paths=PackedStringArray("shard_container")]
 script = ExtResource("4_hwth7")
 fragmented = ExtResource("5_vgk4p")
-shard_container = NodePath("")
+shard_container = NodePath("../..")
 fade_delay = 8.0
 shrink_delay = 8.0
 animation_length = 10.0

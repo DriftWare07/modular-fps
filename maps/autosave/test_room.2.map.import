@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://v1dq03q5vb5a"
+path="res://.godot/imported/test_room.2.map-5a3f713f62a8e1eb8b76af157cc9eedd.tres"
+
+[deps]
+
+source_file="res://maps/autosave/test_room.2.map"
+dest_files=["res://.godot/imported/test_room.2.map-5a3f713f62a8e1eb8b76af157cc9eedd.tres"]
+
+[params]
+

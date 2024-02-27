@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm8pt6r2vrkkw"
-path.s3tc="res://.godot/imported/s2 Wood Painted 01 Blue 1 Faded.png-00a0300acca319b0f91c4b55820c6a87.s3tc.ctex"
+path.s3tc="res://.godot/imported/wood_painted_blue_faded.png-19355b099a1a499bee9a47abd3356ea9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/s2 Wood Painted 01 Blue 1 Faded.png"
-dest_files=["res://.godot/imported/s2 Wood Painted 01 Blue 1 Faded.png-00a0300acca319b0f91c4b55820c6a87.s3tc.ctex"]
+source_file="res://assets/textures/wood_painted_blue_faded.png"
+dest_files=["res://.godot/imported/wood_painted_blue_faded.png-19355b099a1a499bee9a47abd3356ea9.s3tc.ctex"]
 
 [params]
 

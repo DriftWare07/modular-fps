@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbt7gh2vm73i4"
-path.s3tc="res://.godot/imported/s2 Tiles Rect DarkGrey.png-b4e910ae307808f67789179313f2c1ed.s3tc.ctex"
+path.s3tc="res://.godot/imported/dark_grey_tiles.png-420bf6e411557c52a8fb78ebca454601.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/s2 Tiles Rect DarkGrey.png"
-dest_files=["res://.godot/imported/s2 Tiles Rect DarkGrey.png-b4e910ae307808f67789179313f2c1ed.s3tc.ctex"]
+source_file="res://assets/textures/dark_grey_tiles.png"
+dest_files=["res://.godot/imported/dark_grey_tiles.png-420bf6e411557c52a8fb78ebca454601.s3tc.ctex"]
 
 [params]
 

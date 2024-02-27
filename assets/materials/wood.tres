@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b0eumuqcr33q"]
 
-[ext_resource type="Texture2D" uid="uid://bm8pt6r2vrkkw" path="res://assets/textures/s2 Wood Painted 01 Blue 1 Faded.png" id="1_8ungr"]
+[ext_resource type="Texture2D" uid="uid://bm8pt6r2vrkkw" path="res://assets/textures/wood_painted_blue_faded.png" id="1_8ungr"]
 [ext_resource type="Texture2D" uid="uid://c0m76m6psv44r" path="res://assets/textures/normals/woodpaintedbluefaded-norm.png" id="2_rll82"]
 
 [resource]
