@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cann0wi57kkqu"]
+[gd_scene load_steps=62 format=3 uid="uid://cann0wi57kkqu"]
 
 [ext_resource type="Material" uid="uid://c5rhjea5m4phe" path="res://assets/materials/tiles.tres" id="1_87qem"]
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://scenes/player.tscn" id="2_xa1mc"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bm8pt6r2vrkkw" path="res://assets/textures/wood_painted_blue_faded.png" id="10_b3gy1"]
 [ext_resource type="Texture2D" uid="uid://cbt7gh2vm73i4" path="res://assets/textures/dark_grey_tiles.png" id="10_gqlc7"]
 [ext_resource type="Texture2D" uid="uid://755x7fpbwkt6" path="res://assets/textures/stones_loose.png" id="10_siij1"]
+[ext_resource type="Script" path="res://components/damage_trigger.gd" id="12_c84ha"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7eqws"]
 
@@ -209,6 +210,10 @@ points = PackedVector3Array(0.375, 7.125, 0.75, 0.375, 4.5, 0.75, 1.875, 4.5, 0.
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_11kmr"]
 points = PackedVector3Array(0.375, 2.5, 0.75, 0.375, 2.4375, 0.75, 1.875, 2.4375, 0.75, 1.875, 2.5, 0.75, 0.375, 2.5, 1.09375, 0.375, 2.4375, 1.09375, 1.875, 2.4375, 1.09375, 1.875, 2.5, 1.09375)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_w1y2f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vsonv"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_xa1mc")]
@@ -381,3 +386,13 @@ shape = SubResource("ConvexPolygonShape3D_nalak")
 
 [node name="entity_0_brush_37_collision_shape" type="CollisionShape3D" parent="QodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_11kmr")
+
+[node name="Damage_Trigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55114, 2.82232, -2.99275)
+script = ExtResource("12_c84ha")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage_Trigger"]
+shape = SubResource("BoxShape3D_w1y2f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Damage_Trigger"]
+mesh = SubResource("BoxMesh_vsonv")

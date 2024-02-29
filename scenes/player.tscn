@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://kicjwmh02uwf"]
+[gd_scene load_steps=24 format=3 uid="uid://kicjwmh02uwf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wkneb"]
 [ext_resource type="Script" path="res://scripts/procdeuralrecoil.gd" id="2_vr7r5"]
@@ -91,6 +91,19 @@ _data = {
 "roll": SubResource("Animation_s7f04")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0veu3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug7qu"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 10
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="SystemFont" id="SystemFont_qnely"]
+font_names = PackedStringArray("Good Times")
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5hauc"]
 radius = 0.45
 height = 1.6
@@ -154,10 +167,12 @@ raycast = NodePath("../Neck/Head/Eyes/cast")
 
 [node name="weapontimer" type="Timer" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("health", "health_bar")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("health", "health_bar", "tweened_hp_bar", "hp_text")]
 script = ExtResource("8_akw81")
 health = NodePath("../Health_Component")
-health_bar = NodePath("Control/ProgressBar")
+health_bar = NodePath("Control/currenthp")
+tweened_hp_bar = NodePath("Control/tweenhp")
+hp_text = NodePath("Control/currenthp/Label")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -177,7 +192,7 @@ grow_vertical = 2
 texture = ExtResource("7_clw6a")
 stretch_mode = 3
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control"]
+[node name="tweenhp" type="ProgressBar" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -188,6 +203,35 @@ offset_right = 715.0
 offset_bottom = -11.0
 grow_vertical = 0
 theme = ExtResource("10_yotnm")
+value = 50.0
+show_percentage = false
+
+[node name="currenthp" type="ProgressBar" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -138.0
+offset_right = 715.0
+offset_bottom = -11.0
+grow_vertical = 0
+theme = ExtResource("10_yotnm")
+theme_override_styles/background = SubResource("StyleBoxEmpty_0veu3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ug7qu")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/currenthp"]
+layout_mode = 1
+offset_right = 708.0
+offset_bottom = 132.0
+theme_override_fonts/font = SubResource("SystemFont_qnely")
+theme_override_font_sizes/font_size = 32
+text = "HP
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Damage_Component" type="Area3D" parent="." node_paths=PackedStringArray("health_node")]
 script = ExtResource("9_hyl3y")

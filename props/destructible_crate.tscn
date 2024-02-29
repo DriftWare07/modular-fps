@@ -37,7 +37,7 @@ shape = SubResource("BoxShape3D_rpw2d")
 [node name="Destruction" type="Node" parent="." node_paths=PackedStringArray("shard_container")]
 script = ExtResource("4_hwth7")
 fragmented = ExtResource("5_vgk4p")
-shard_container = NodePath("../..")
+shard_container = NodePath("")
 fade_delay = 8.0
 shrink_delay = 8.0
 animation_length = 10.0

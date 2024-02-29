@@ -1,8 +1,8 @@
+Label
 MeshInstance3D
 CollisionShape3D
 Damage_Trigger
 ProgressBar
-Label
 Health_Component
 Damage_Component
 QodotMap

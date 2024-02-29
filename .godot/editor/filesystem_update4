@@ -4,6 +4,7 @@ res://assets/materials/tiles.tres
 res://weapons/uzi.tres
 res://weapons/knife.tres
 res://weapons/shotgun.tres
+res://main_ui_theme.tres
 res://world_env.tres
 res://assets/materials/wood.tres
 res://assets/materials/viewmodelshader.gdshader
@@ -11,8 +12,5 @@ res://scenes/player.tscn
 res://scenes/vfx/bullet_decal.tscn
 res://props/door.tscn
 res://props/destructible_crate.tscn
-res://scripts/player.gd
+res://components/damage_trigger.gd
 res://scripts/playerui.gd
-res://components/damagetrigger.gd
-res://components/healthcomponent.gd
-res://main_ui_theme.tres
