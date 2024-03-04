@@ -103,6 +103,7 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="SystemFont" id="SystemFont_qnely"]
 font_names = PackedStringArray("Good Times")
+subpixel_positioning = 0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5hauc"]
 radius = 0.45
@@ -151,6 +152,7 @@ target_object = NodePath("gunmesh")
 
 [node name="gunmesh" type="MeshInstance3D" parent="Neck/Head/recoil"]
 layers = 3
+lod_bias = 0.001
 mesh = ExtResource("6_u3ugj")
 skeleton = NodePath("../../../..")
 

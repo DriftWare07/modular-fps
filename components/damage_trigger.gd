@@ -16,7 +16,7 @@ func _process(delta):
 			valid.append(i)
 	
 	tick_timer+=delta
-	print(tick_timer)
+	#print(tick_timer)
 	
 	if tick_timer > tick:
 		tick_timer = 0

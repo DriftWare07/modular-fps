@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkgbsi54j6cwc"]
+
+[ext_resource type="Script" path="res://entities/entity.gd" id="1_vfpve"]
+[ext_resource type="PackedScene" uid="uid://brlq5egl5njqg" path="res://assets/models/Adventurer.gltf" id="2_6iumj"]
+[ext_resource type="Script" path="res://components/healthcomponent.gd" id="3_gi5pf"]
+[ext_resource type="Script" path="res://components/damagecomponent.gd" id="4_4hv81"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bkvdj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4wnym"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3svn6"]
+radius = 0.51
+height = 2.1
+
+[node name="FollowEntity" type="CharacterBody3D"]
+script = ExtResource("1_vfpve")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 5.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bkvdj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_4wnym")
+
+[node name="Adventurer" parent="." instance=ExtResource("2_6iumj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.992324, 0)
+
+[node name="Health_Component" type="Node" parent="."]
+script = ExtResource("3_gi5pf")
+
+[node name="Damage_Component" type="Area3D" parent="." node_paths=PackedStringArray("health_node")]
+script = ExtResource("4_4hv81")
+health_node = NodePath("../Health_Component")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage_Component"]
+shape = SubResource("CapsuleShape3D_3svn6")

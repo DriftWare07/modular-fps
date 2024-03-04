@@ -1,15 +1,15 @@
 f2b985f967f0bdb1e3adfa033ebc58fb
-::res://::1709235266
+::res://::1709588582
 CHANGELOG.md::TextFile::-1::1708717385::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::704140066206254992::1708115213::0::1::::<><>::
 demo.gd::GDScript::-1::1708717385::0::1::::<>Node3D<>::
 demo.tscn::PackedScene::-1::1708717385::0::1::::<><>::
 icon.png::CompressedTexture2D::8097125912483352967::1708717385::1708717386::1::::<><>::
 icon.svg::CompressedTexture2D::5602766641754900057::1707772140::1707772147::1::::<><>::
-main_ui_theme.tres::Theme::6120276373172202500::1709070819::0::1::::<><>::
+main_ui_theme.tres::Theme::6120276373172202500::1709585568::0::1::::<><>::
 README.md::TextFile::-1::1708637603::0::1::::<><>::
-setup.tscn::PackedScene::4800513413220934764::1709071092::0::1::::<><>::uid://c5rhjea5m4phe::::res://assets/materials/tiles.tres<>uid://kicjwmh02uwf::::res://scenes/player.tscn<>uid://gf002vy78f1f::::res://world_env.tres<>uid://w0013c7waof::::res://props/destructible_crate.tscn<>uid://btcb25b6tc18x::::res://props/door.tscn<>res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://b6g08qubul7mr::::res://assets/textures/leave_fallen.png<>uid://bm8pt6r2vrkkw::::res://assets/textures/wood_painted_blue_faded.png<>uid://cbt7gh2vm73i4::::res://assets/textures/dark_grey_tiles.png<>uid://755x7fpbwkt6::::res://assets/textures/stones_loose.png<>res://components/damage_trigger.gd
-world_env.tres::Environment::433018971971140437::1709070819::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr
+setup.tscn::PackedScene::4800513413220934764::1709588582::0::1::::<><>::uid://c5rhjea5m4phe::::res://assets/materials/tiles.tres<>uid://kicjwmh02uwf::::res://scenes/player.tscn<>uid://gf002vy78f1f::::res://world_env.tres<>uid://w0013c7waof::::res://props/destructible_crate.tscn<>uid://btcb25b6tc18x::::res://props/door.tscn<>res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://b6g08qubul7mr::::res://assets/textures/leave_fallen.png<>uid://bm8pt6r2vrkkw::::res://assets/textures/wood_painted_blue_faded.png<>uid://cbt7gh2vm73i4::::res://assets/textures/dark_grey_tiles.png<>uid://755x7fpbwkt6::::res://assets/textures/stones_loose.png<>res://components/damage_trigger.gd<>uid://dkgbsi54j6cwc::::res://entities/follow_entity.tscn
+world_env.tres::Environment::433018971971140437::1709585568::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr
 ::res://addons/::1708792755
 ::res://addons/destruction/::1708752370
 destruction.gd::GDScript::-1::1708752370::0::1::::Destruction<>Node<>res://addons/destruction/destruction_icon.svg::
@@ -32,7 +32,7 @@ THIRDPARTY.txt::TextFile::-1::1708636615::0::1::::<><>::
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/::1708636615
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/Resources/::1708636615
 ::res://addons/godot-jolt/macos/godot-jolt_macos_editor.framework/_CodeSignature/::1708636615
-::res://addons/godot-jolt/windows/::1709235259
+::res://addons/godot-jolt/windows/::1709585548
 ::res://addons/qodot/::1708792758
 icon.png::CompressedTexture2D::4303817965049754646::1708754036::1708792758::1::::<><>::
 palette.lmp::Resource::4215014223586875623::1708754036::1708754036::1::::<><>::
@@ -215,12 +215,12 @@ skip.png::CompressedTexture2D::3013576122456084822::1708754041::1708792758::1:::
 ::res://assets/::1708635069
 ::res://assets/hdris/::1708635069
 kloofendal_48d_partly_cloudy_puresky_2k.hdr::CompressedTexture2D::1269733906213135395::1707772263::1707772281::1::::<><>::
-::res://assets/materials/::1709071161
+::res://assets/materials/::1709588582
 bullet_hole.png::CompressedTexture2D::4430704226668711042::1708119005::1708119099::1::::<><>::
-tiles.tres::StandardMaterial3D::6914042400914355862::1709070819::0::1::::<><>::uid://cbt7gh2vm73i4::::res://assets/textures/dark_grey_tiles.png<>uid://c6nwn6607pcw6::::res://assets/textures/normals/darkgreytile_normal.png
-viewmodelshader.gdshader::Shader::-1::1709071161::0::1::::<><>::
-wood.tres::StandardMaterial3D::122077533245321568::1709070819::0::1::::<><>::uid://bm8pt6r2vrkkw::::res://assets/textures/wood_painted_blue_faded.png<>uid://c0m76m6psv44r::::res://assets/textures/normals/woodpaintedbluefaded-norm.png
-::res://assets/models/::1708750946
+tiles.tres::StandardMaterial3D::6914042400914355862::1709585567::0::1::::<><>::uid://cbt7gh2vm73i4::::res://assets/textures/dark_grey_tiles.png<>uid://c6nwn6607pcw6::::res://assets/textures/normals/darkgreytile_normal.png
+viewmodelshader.gdshader::Shader::-1::1709588582::0::1::::<><>::
+wood.tres::StandardMaterial3D::122077533245321568::1709585567::0::1::::<><>::uid://bm8pt6r2vrkkw::::res://assets/textures/wood_painted_blue_faded.png<>uid://c0m76m6psv44r::::res://assets/textures/normals/woodpaintedbluefaded-norm.png
+::res://assets/models/::1709237917
 Adventurer.gltf::PackedScene::3603364446438348146::1707772977::1707773850::1::::<><>::
 door_brown_a.glb::PackedScene::1379074898056306531::1708750945::1708750946::1::::<><>::uid://dwe65a172245j::::res://assets/models/door_brown_a_door_double_brown_right.png
 door_brown_a_door_double_brown_right.png::CompressedTexture2D::8713609964381187201::1708750946::1708750946::1::::<><>::
@@ -229,15 +229,19 @@ crate_dest_1.glb::PackedScene::2460317865361869573::1708719863::1708719976::1:::
 crate_dest_1_s2 Wood Painted 01 Blue 1 Faded.png::CompressedTexture2D::7454615378577420344::1708719633::1708719633::1::::<><>::
 door_brown_a dest.glb::PackedScene::1047093970678288998::1708752440::1708752440::1::::<><>::uid://dy3sqqky1ye4y::::res://assets/models/destruction models/door_brown_a dest_door_double_brown_right.png
 door_brown_a dest_door_double_brown_right.png::CompressedTexture2D::8902719211025819106::1708752120::1708752121::1::::<><>::
-::res://assets/models/weaponmodels/::1708635069
+::res://assets/models/enemies/::1709243582
+George.gltf::PackedScene::8404011009739286161::1709237925::1709238030::1::::<><>::
+George_George_Texture.png::CompressedTexture2D::290040082533237044::1709237925::1709237928::1::::<><>::
+::res://assets/models/weaponmodels/::1709588601
 knife_sharp.obj::Mesh::8578489911632668102::1708028845::1708028877::1::::<><>::
-Shotgun_1.obj::Mesh::3719854383687639838::1708552109::1708633984::1::::<><>::
-uziLong.obj::Mesh::6761317422097287242::1707773290::1707942457::1::::<><>::
+Shotgun_1.obj::Mesh::3719854383687639838::1709588601::1709588610::1::::<><>::
+uziLong.obj::Mesh::6761317422097287242::1707773290::1709583580::1::::<><>::
+uzimesh.res::ArrayMesh::6391818140361652866::1709583556::0::1::::<><>::
 ::res://assets/particle process/::1708635069
 smoke.tres::ParticleProcessMaterial::1372168729598846927::1708120035::0::1::::<><>::
 smoke_04.png::CompressedTexture2D::6158582138149591279::1708118752::1708118754::1::::<><>::
-::res://assets/particle process/fireflash/::1709070818
-fireflash.tres::ParticleProcessMaterial::1097453157101882967::1709070818::0::1::::<><>::
+::res://assets/particle process/fireflash/::1709585567
+fireflash.tres::ParticleProcessMaterial::1097453157101882967::1709585567::0::1::::<><>::
 smoke.tres::StandardMaterial3D::3701977532950255847::1708118474::0::1::::<><>::uid://y0nyu0o6e0id::::res://assets/particle process/sparks/star_05.png
 ::res://assets/particle process/flash/::1708635069
 flash.tres::ParticleProcessMaterial::4326457468222635800::1708116720::0::1::::<><>::
@@ -264,10 +268,16 @@ texture_05.png::CompressedTexture2D::221177165388359405::1707772263::1707772264:
 ::res://assets/textures/normals/::1708636521
 darkgreytile_normal.png::CompressedTexture2D::6976893097421641323::1707772701::1707772716::1::::<><>::
 woodpaintedbluefaded-norm.png::CompressedTexture2D::6554333973640891591::1708636509::1708636521::1::::<><>::
-::res://components/::1709071046
+::res://components/::1709243496
 damagecomponent.gd::GDScript::-1::1708723928::0::1::::Damage_Component<>Area3D<>::
-damage_trigger.gd::GDScript::-1::1709071046::0::1::::Damage_Trigger<>Area3D<>::
+damage_trigger.gd::GDScript::-1::1709243496::0::1::::Damage_Trigger<>Area3D<>::
 healthcomponent.gd::GDScript::-1::1709068831::0::1::::Health_Component<>Node<>::
+::res://entities/::1709588582
+entity.gd::GDScript::-1::1709588384::0::1::::<>CharacterBody3D<>::
+entity_nav.gd::GDScript::-1::1709585408::0::1::::entity_nav<>Node<>::
+follow_entity.tscn::PackedScene::7873630083128849694::1709588582::0::1::::<><>::res://entities/entity.gd<>uid://brlq5egl5njqg::::res://assets/models/Adventurer.gltf<>res://components/healthcomponent.gd<>res://components/damagecomponent.gd
+ragdoll_starter.gd::GDScript::-1::1709243104::0::1::::Ragdoll_Init<>Node<>::
+::res://entities/enemies/::1709238063
 ::res://LICENSES/::1708718265
 CC0-1.0.txt::TextFile::-1::1708718265::0::1::::<><>::
 MIT.txt::TextFile::-1::1708718265::0::1::::<><>::
@@ -278,15 +288,15 @@ test_room.map::Resource::1859938922320622757::1708992238::1708992239::1::::<><>:
 test_room.1.map::Resource::6662070008342536946::1708990364::1708990451::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
 test_room.2.map::Resource::1527851618791173640::1708990965::1708991030::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
 test_room.3.map::Resource::4334034838565736983::1708991565::1708991874::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
-::res://props/::1709071084
-destructible_crate.tscn::PackedScene::46980289252225233::1709071084::0::1::::<><>::uid://b0eumuqcr33q::::res://assets/materials/wood.tres<>res://components/healthcomponent.gd<>res://components/damagecomponent.gd<>res://addons/destruction/destruction.gd<>uid://bbb2ctuw8tfaj::::res://assets/models/destruction models/crate_dest_1.glb
-door.tscn::PackedScene::3724247980431341633::1709071084::0::1::::<><>::uid://twbfrmu4apgl::::res://assets/models/door_brown_a.glb
-::res://scenes/::1709071084
-player.tscn::PackedScene::718542138947376649::1709071084::0::1::::<><>::res://scripts/player.gd<>res://scripts/procdeuralrecoil.gd<>res://scripts/weaponhandler.gd<>uid://bsbe2kedexe2v::::res://weapons/uzi.tres<>uid://dft7em0aeetqq::::res://weapons/knife.tres<>uid://ddq1d8mtsc64k::::res://weapons/shotgun.tres<>uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://cvyem22atdekq::::res://assets/textures/crossheirs/crosshair047.png<>res://scripts/playerui.gd<>res://components/damagecomponent.gd<>res://components/healthcomponent.gd<>uid://ctgyb7xfkmhai::::res://main_ui_theme.tres
+::res://props/::1709588581
+destructible_crate.tscn::PackedScene::46980289252225233::1709588581::0::1::::<><>::uid://b0eumuqcr33q::::res://assets/materials/wood.tres<>res://components/healthcomponent.gd<>res://components/damagecomponent.gd<>res://addons/destruction/destruction.gd<>uid://bbb2ctuw8tfaj::::res://assets/models/destruction models/crate_dest_1.glb
+door.tscn::PackedScene::3724247980431341633::1709588581::0::1::::<><>::uid://twbfrmu4apgl::::res://assets/models/door_brown_a.glb
+::res://scenes/::1709588582
+player.tscn::PackedScene::718542138947376649::1709588582::0::1::::<><>::res://scripts/player.gd<>res://scripts/procdeuralrecoil.gd<>res://scripts/weaponhandler.gd<>uid://bsbe2kedexe2v::::res://weapons/uzi.tres<>uid://dft7em0aeetqq::::res://weapons/knife.tres<>uid://ddq1d8mtsc64k::::res://weapons/shotgun.tres<>uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://cvyem22atdekq::::res://assets/textures/crossheirs/crosshair047.png<>res://scripts/playerui.gd<>res://components/damagecomponent.gd<>res://components/healthcomponent.gd<>uid://ctgyb7xfkmhai::::res://main_ui_theme.tres
 soundinstance.tscn::PackedScene::1403380473848000587::1708750746::0::1::::<><>::res://scripts/soundinstance.gd
 world.tscn::PackedScene::6546365893821010311::1708750746::0::1::::<><>::uid://sdcljx8f5dhj::::res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://nxfjrmnbay4t::::res://assets/textures/dev/grids/Dark/texture_07.png<>uid://kicjwmh02uwf::::res://scenes/player.tscn
-::res://scenes/vfx/::1709071084
-bullet_decal.tscn::PackedScene::7242219474430839630::1709071084::0::1::::<><>::uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png
+::res://scenes/vfx/::1709588581
+bullet_decal.tscn::PackedScene::7242219474430839630::1709588581::0::1::::<><>::uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png
 bullet_impact.tscn::PackedScene::8986928983196718630::1708131689::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://by2xgosssf1md::::res://scenes/vfx/small_sparks.tscn
 explosion_vfx.gd::GDScript::-1::1708117540::0::1::::<>Node3D<>::
 explosion_vfx.tscn::PackedScene::6416994897182846349::1708717420::0::1::::<><>::res://scenes/vfx/particlefx.gd<>uid://by2xgosssf1md::::res://scenes/vfx/small_sparks.tscn<>uid://bs0ja8v3b5vgh::::res://assets/particle process/fireflash/smoke.tres<>uid://b0h1h55ru3v5q::::res://scenes/vfx/small_flash.tscn<>uid://pvu5mqwuhkst::::res://assets/particle process/fireflash/fireflash.tres<>uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
@@ -296,15 +306,15 @@ small_flash.tscn::PackedScene::4157185184136482976::1708120073::0::1::::<><>::ui
 small_smoke.tscn::PackedScene::8137708044293548256::1708635186::0::1::::<><>::uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
 small_sparks.tscn::PackedScene::4128099099938050443::1708120073::0::1::::<><>::uid://dgojoeyqct3q0::::res://assets/particle process/sparks/flashmaterial.tres
 smoke.tscn::PackedScene::3702622063024073821::1708119941::0::1::::<><>::uid://ct0i7h6tt3864::::res://assets/particle process/smoke_04.png
-::res://scripts/::1709068939
+::res://scripts/::1709236364
 fx_manager.gd::GDScript::-1::1708751743::0::1::::<>Node<>::
 player.gd::GDScript::-1::1709066086::0::1::::<>CharacterBody3D<>::
-playerui.gd::GDScript::-1::1709068939::0::1::::<>CanvasLayer<>::
+playerui.gd::GDScript::-1::1709236364::0::1::::<>CanvasLayer<>::
 procdeuralrecoil.gd::GDScript::-1::1708637000::0::1::::RecoilHandler<>Node<>::
 soundinstance.gd::GDScript::-1::1708115165::0::1::::<>Node3D<>::
 weaponhandler.gd::GDScript::-1::1708754324::0::1::::<>Node3D<>::
 weaponresource.gd::GDScript::-1::1708634374::0::1::::weapon<>Resource<>::
-::res://weapons/::1709070819
-knife.tres::Resource/weapon::7551380202446584476::1709070819::0::1::::<><>::res://scripts/weaponresource.gd<>uid://duhqqfxrf6ceo::::res://assets/models/weaponmodels/knife_sharp.obj
-shotgun.tres::Resource/weapon::7404444377947649776::1709070819::0::1::::<><>::uid://bs86ptx7kfbpu::::res://assets/models/weaponmodels/Shotgun_1.obj<>res://scripts/weaponresource.gd<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn<>uid://b4g35cnyyek8j::::res://assets/sfx/20 Gauge Single.mp3
-uzi.tres::Resource/weapon::3652175862893522067::1709070819::0::1::::<><>::uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>res://scripts/weaponresource.gd<>uid://cacx2fi8gyr2h::::res://assets/sfx/9mm Single.mp3<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn
+::res://weapons/::1709588548
+knife.tres::Resource/weapon::7551380202446584476::1709585568::0::1::::<><>::res://scripts/weaponresource.gd<>uid://duhqqfxrf6ceo::::res://assets/models/weaponmodels/knife_sharp.obj
+shotgun.tres::Resource/weapon::7404444377947649776::1709588548::0::1::::<><>::uid://c3lh57cu4swek::::res://assets/models/weaponmodels/Shotgun_1.obj<>res://scripts/weaponresource.gd<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn<>uid://b4g35cnyyek8j::::res://assets/sfx/20 Gauge Single.mp3
+uzi.tres::Resource/weapon::3652175862893522067::1709585568::0::1::::<><>::uid://c3lh57cu4swek::::res://assets/models/weaponmodels/uziLong.obj<>uid://d1bln35l1vtuk::::res://scenes/vfx/bullet_impact.tscn<>uid://b4ejb0jqkh1ac::::res://assets/materials/bullet_hole.png<>res://scripts/weaponresource.gd<>uid://cacx2fi8gyr2h::::res://assets/sfx/9mm Single.mp3<>uid://bgkmbpwkxxggb::::res://scenes/vfx/muzzle_flash.tscn
