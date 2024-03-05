@@ -42,4 +42,7 @@ fade_delay = 8.0
 shrink_delay = 8.0
 animation_length = 10.0
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+radius = 0.98
+
 [connection signal="death" from="Health_Component" to="Destruction" method="destroy"]
